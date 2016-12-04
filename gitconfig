@@ -10,7 +10,7 @@
   remote = yellow
 
 [core]
-  pager = less -FRSX
+	pager = less -F -X
 	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
 
 [alias]
@@ -49,3 +49,9 @@
 [user]
 	email = clementine.guyon@outlook.com
 	name = clementine guyon
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
